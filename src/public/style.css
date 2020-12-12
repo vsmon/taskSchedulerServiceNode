@@ -1,0 +1,21 @@
+.command-field, .name-field{
+    position: absolute;
+    width: 371px;
+    height: 31px;
+
+    background: #0BD7E4;
+    border-radius: 5px;
+}
+
+.schedule{
+    position: absolute;
+    width: 38px;
+    height: 37px;
+    background: #0BD7E4;
+    border-radius: 5px;
+}
+
+.schedule-div{
+    display: flex;
+    flex-direction: row;
+}
