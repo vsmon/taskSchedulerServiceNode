@@ -17,14 +17,13 @@ const programToExec = "C:/Progress/OpenEdge/bin/prowin.exe";
   "5",
 ]; */
 
-const task = async (taskName, program, args) => {
+const task = (taskName, program, args) => {
   console.log(`${new Date()} Tarefa ${taskName} iniciada`);
   runExec(program, args);
 };
 
-scheduler(
-  schedule1,
-  runExec(programToExec, [
+scheduler(schedule1, () =>
+  task("task", programToExec, [
     "-basekey",
     "INI",
     "-ininame",
@@ -39,8 +38,7 @@ scheduler(
   ])
 );
 
-/* scheduler(
-  schedule2,
+scheduler(schedule2, () =>
   task("Task 1", programToExec, [
     "-basekey",
     "INI",
@@ -54,4 +52,4 @@ scheduler(
     "-ct",
     "5",
   ])
-); */
+);

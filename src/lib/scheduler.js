@@ -1,6 +1,6 @@
 const cron = require("node-cron");
 
-const scheduler = function (schedule, job) {
+const scheduler = (schedule, job) => {
   if (!cron.validate(schedule)) {
     return console.log("Expressao de agendamento invalida");
   }
